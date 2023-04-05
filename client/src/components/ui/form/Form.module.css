@@ -1,0 +1,67 @@
+.container {
+    min-width: 400px;
+    margin: 20px 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.headerForm {
+
+
+}
+
+
+.headerText {
+
+
+}
+
+
+.inputGroup {
+    width: 80%;
+    margin: 6px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.inputLabel {
+    color: #888;
+    margin-right: 12px;
+}
+
+
+.inputText {
+    width: 100%;
+    padding:  6px 12px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.inputText:focus {
+    background-color: #d3fcdc;
+    border: 1px solid #059c26;
+    color: #000;
+
+}
+
+
+.errorMsg {
+
+
+}
+
+.formControl {
+    display: flex;
+    justify-content: center;
+}
