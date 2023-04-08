@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
-import styles from "./Wrapper.module.css";
 import { Icons } from "../../constants/icons";
 import ButtonContainer from "../../components/ui/buttons/ButtonContainer";
 import { Images } from "../../constants/images";
@@ -10,6 +9,7 @@ import { Images } from "../../constants/images";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logout } from "../../actions/authAction";
+import styles from "./Wrapper.module.css";
 
 const Wrapper = ({ children, header }) => {
   const [displayNotifi, setDisplayNotifi] = useState(true);
@@ -27,7 +27,7 @@ const Wrapper = ({ children, header }) => {
 	}, [location]);
   return (
     <Container>
-      <div className={[styles.wrapper]}>
+      <div className={styles.wrapper}>
         <Row>
           <div className={styles.header}>
             <Col xl={7} md={6} sm={6}>

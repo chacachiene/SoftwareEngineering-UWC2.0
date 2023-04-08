@@ -20,16 +20,10 @@ const Trucks = () => {
     const username = "Nghia Nguyen";
     return (
     <>
-            <Wrapper
-            header={{
-                notifications: notifications,
-                messages: messages,
-                username: username,
-            }}
-            >
+         
         <h1>Trucks List</h1>
-        <div class="input-group mb-3">
-            <button type="button" class="ms-3 btn btn-primary " onClick={() => setOpen(o => !o)}>
+        <div className="input-group mb-3">
+            <button type="button" className="ms-3 btn btn-primary " onClick={() => setOpen(o => !o)}>
                 Add Truck
             </button>
             <Popup open={open} modal onClose={closeForm}>
@@ -37,8 +31,8 @@ const Trucks = () => {
             </Popup>
 
         </div>
-        {!trucks.length ? <div class="spinner-border" role="status"/> : 
-        <table class="table">
+        {!trucks.length ? <div className="spinner-border" role="status"/> : 
+        <table className="table">
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -54,7 +48,7 @@ const Trucks = () => {
         {trucks.map((truck) => <Truck truck={truck} key={truck._id}/>)}
         </tbody>
         </table>}   
-        </Wrapper>
+
     </>)
 }
 

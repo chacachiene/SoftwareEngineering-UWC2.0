@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Navbar from "./components/Navbar/Navbar.js"
+
+import Wrapper from './pages/layouts/Wrapper.js';
 import Home from "./components/Home/Home.js"
 import Users from './components/Users/Users.js';
 import Auth from './components/Auth/Auth.js';
@@ -11,13 +12,19 @@ import Trucks from "./components/Trucks/Trucks.js";
 import Tasks from "./components/Tasks/Tasks.js"
 import Chats from "./components/Chats/Chats.js"
 import Map from "./components/Map/Map.js"
-
 const App = () => {
     return (
         <BrowserRouter>
-            <div class="row justify-content-start">
-                
-                <div class="col">
+         
+                <Wrapper
+                    header={{
+                        notifications: '1',
+                        messages: '2',
+                        username: 'Username',
+                      }}
+                    
+                >
+
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/auth" element={<Auth />} />
@@ -28,8 +35,9 @@ const App = () => {
                         <Route exact path="/map" element={<Map />} />
                         <Route exact path="/chats" element={<Chats />} />
                     </Routes>
-                </div>
-            </div>
+                </Wrapper>
+
+        
         </BrowserRouter>
     )
 };

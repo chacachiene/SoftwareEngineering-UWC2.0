@@ -21,16 +21,10 @@ function Tasks() {
 
     return (
         <>
-        <Wrapper
-            header={{
-                notifications: notifications,
-                messages: messages,
-                username: username,
-            }}
-            >
+       
             <h1>Tasks List</h1>
-            <div class="input-group mb-3">
-                <button type="button" class="ms-3 btn btn-primary " onClick={() => setOpen(o => !o)}>
+            <div className="input-group mb-3">
+                <button type="button" className="ms-3 btn btn-primary " onClick={() => setOpen(o => !o)}>
                     Add Task
                 </button>
                 <Popup  open={open} onClose={closeForm}>
@@ -38,8 +32,8 @@ function Tasks() {
                 </Popup>
 
             </div>
-            {!tasks.length ? <div class="spinner-border" role="status" /> :
-                <table class="table">
+            {!tasks.length ? <div className="spinner-border" role="status" /> :
+                <table className="table">
                     <thead>
                         <tr>
                             <th scope="col">STT</th>
@@ -58,7 +52,6 @@ function Tasks() {
                         {tasks.map((task, index) => <Task idx={index} task={task} key={task._id} />)}
                     </tbody>
                 </table>}
-            </Wrapper>
         </>)
 }
 
