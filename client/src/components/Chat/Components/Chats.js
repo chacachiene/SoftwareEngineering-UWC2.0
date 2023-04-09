@@ -9,7 +9,7 @@ const Chats = () => {
     const activeChat = "1";
     const dispatch = useDispatch();
     const { chats } = useSelector(state => state.chat);
-    console.log(chats)
+
     useEffect(() => {
         dispatch(getChats());
     }, []);

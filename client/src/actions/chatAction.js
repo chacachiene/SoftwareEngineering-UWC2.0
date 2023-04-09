@@ -12,7 +12,7 @@ export const getChats = () => async (dispatch) => {
 
 export const chooseChat = (chat) => async (dispatch) => {
     try {
-        const { data } = await api.getMessages(id);
+        const { data } = await api.getMessages(chat._id);
 
         dispatch({ type: "CHOOSE_CHAT", payload: { chat: chat, messages: data } });
     } catch (error) {
@@ -22,9 +22,9 @@ export const chooseChat = (chat) => async (dispatch) => {
 
 export const sendMessage = (chat, content) => async (dispatch) => {
     try {
-        const { data } = await api.sendMessage(chat._id, content);
+        const { data } = await api.sendMessage(chat._id,{content});
 
-        dispatch({ type: 'SEND_MESSAGE', payload: {chat: {...chat, latestMessage: json.result}, message: data} })
+        dispatch({ type: 'SEND_MESSAGE', payload: {chat: {...chat, latestMessage: data.result}, message: data} })
     } catch (error) {
         console.log(error);
     }

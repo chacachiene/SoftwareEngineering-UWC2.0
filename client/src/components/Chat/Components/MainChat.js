@@ -26,7 +26,7 @@ const MainChat = () => {
         socket.on('connected', () => {
             console.log('socket connected')
         })
-    }, [user]);
+    }, []);
 
     useEffect(() => {
         socket?.on("message received", () => {

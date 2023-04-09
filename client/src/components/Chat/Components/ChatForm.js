@@ -41,7 +41,7 @@ const ChatForm = ({ open, onClose, currChat }) => {
     };
 
     const handleSubmit = (e) => {
-        !(!currChat) ? dispatch(updateChat(currChat._id, form)) : dispacth(createChat(form));
+        !(!currChat) ? dispatch(updateChat(currChat._id, form)) : dispatch(createChat(form));
         setForm({ name: '', users: [] });
         onClose();
     }
@@ -64,7 +64,7 @@ const ChatForm = ({ open, onClose, currChat }) => {
                             renderValue={(selected) => (
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
                                     {selected.map((value) => (
-                                        <Chip key={value} label={emps.find(x => x._id === value).name} />
+                                        <Chip key={value} label={users.find(x => x._id === value).name} />
                                     ))}
                                 </Box>
                             )}

@@ -26,6 +26,7 @@ export const sendMessage = async (req, res) =>  {
         if (!chat.users.map(x => x._id.toString()).includes(req.user._id.toString())) return res.status(403).json("You are not in this group");
 
         let message = await MessageModel.create({ sender: req.user._id, content, chat})
+        await message.populate("sender", "name role available")
         chat = await ChatModel.findByIdAndUpdate( chat._id, {lastestMessage: message} ).select("-__v");
         
         res.status(200).json({ message: "Message sent", result: message });
