@@ -1,8 +1,8 @@
 import * as api from '../api/index.js';
 
-export const getChats = (query) => async (dispatch) => {
+export const getChats = () => async (dispatch) => {
     try {
-        const { data } = await api.getChats(query);
+        const { data } = await api.getChats();
 
         dispatch({ type: "GET_CHATS", payload: data });
     } catch (error) {
@@ -10,23 +10,21 @@ export const getChats = (query) => async (dispatch) => {
     }
 };
 
-export const getSingleChat = (id) => async (dispatch) => {
+export const chooseChat = (chat) => async (dispatch) => {
     try {
-        const { data: chat } = await api.getSingleChat(id);
+        const { data } = await api.getMessages(id);
 
-        const { data: messages } = await api.getMessages(id);
-
-        dispatch({ type: "GET_SINGLE_CHAT", payload: { chat, messages } });
+        dispatch({ type: "CHOOSE_CHAT", payload: { chat: chat, messages: data } });
     } catch (error) {
         console.log(error);
     }
 }
 
-export const sendMessage = (id, form) => async (dispatch) => {
+export const sendMessage = (chat, content) => async (dispatch) => {
     try {
-        const { data } = await api.sendMessage(id, form);
+        const { data } = await api.sendMessage(chat._id, content);
 
-        dispatch({ type: "SEND_MESSAGE", payload: data });
+        dispatch({ type: 'SEND_MESSAGE', payload: {chat: {...chat, latestMessage: json.result}, message: data} })
     } catch (error) {
         console.log(error);
     }

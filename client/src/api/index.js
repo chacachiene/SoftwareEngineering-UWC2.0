@@ -50,7 +50,7 @@ export const deleteTask = (id) => API.delete(`/task/${id}`);
 
 
 
-export const getChats = (query) => API.get(`/chat?name=${query.name}`);
+export const getChats = () => API.get(`/chat`);
 export const getSingleChat = (id) => API.get(`/chat/${id}`);
 export const getMessages = (id) => API.get(`/mess/chat/${id}`);
 export const sendMessage = (id, form) => API.post(`/mess/chat/${id}`, form);

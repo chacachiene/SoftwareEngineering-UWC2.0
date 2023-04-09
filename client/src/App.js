@@ -9,7 +9,7 @@ import Auth from './components/Auth/Auth.js';
 import MCPs from "./components/MCPs/MCPs.js";
 import Trucks from "./components/Trucks/Trucks.js";
 import Tasks from "./components/Tasks/Tasks.js"
-import Chats from "./components/Chats/Chats.js"
+import Chat from "./components/Chat/Chat.js"
 import Map from "./components/Map/Map.js"
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
                         <Route exact path="/trucks" element={<Trucks />} />
                         <Route exact path="/tasks" element={<Tasks />} />
                         <Route exact path="/map" element={<Map />} />
-                        <Route exact path="/chats" element={<Chats />} />
+                        <Route exact path="/chat" element={<Chat />} />
                     </Routes>
                 </div>
             </div>
