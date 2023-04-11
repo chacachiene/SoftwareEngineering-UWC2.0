@@ -34,23 +34,23 @@ const Auth = () => {
     <form style={{width:"50vw"}} onSubmit={handleSubmit}>
         <h1>{ isSignup ? 'Sign Up': 'Sign In' }</h1>
         {   isSignup && (
-            <div class="form-group">
+            <div className="form-group">
             <label htmlFor="#fname">Name</label>
-            <input type="text" id="fname" class="form-control" name="name" onChange={handleChange}/>
+            <input type="text" id="fname" className="form-control" name="name" onChange={handleChange}/>
             </div>
         )
         }
-        <div class="form-group">
+        <div className="form-group">
             <label htmlFor="#username">Username</label>
-            <input type="text" id="usernme" class="form-control" name="username" onChange={handleChange}/>
+            <input type="text" id="usernme" className="form-control" name="username" onChange={handleChange}/>
         </div>
-        <div class="form-group">
+        <div className="form-group">
             <label htmlFor="#pass">Password</label>
-            <input type="password" id="class" class="form-control" name="password" onChange={handleChange}/>
+            <input type="password" id="className" className="form-control" name="password" onChange={handleChange}/>
         </div>
-        { isSignup && (<div class="form-group">
+        { isSignup && (<div className="form-group">
             <label htmlFor="role">Role</label>
-            <select class="form-control" id="role" name = "role" default="" onChange={handleChange}>
+            <select className="form-control" id="role" name = "role" default="" onChange={handleChange}>
                 <option value=""></option>
                 <option value="janitor">Janitor</option>
                 <option value="collector">Collector</option>
@@ -59,8 +59,8 @@ const Auth = () => {
         </div>)
         }
         <hr/>
-        <button type="submit" class="btn btn-primary me-4">{isSignup ? 'Sign Up' : 'Sign In'}</button>
-        <button type="button" class="btn btn-secondary" onClick={switchMode}>
+        <button type="submit" className="btn btn-primary me-4">{isSignup ? 'Sign Up' : 'Sign In'}</button>
+        <button type="button" className="btn btn-secondary" onClick={switchMode}>
             { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }
         </button>
     </form>

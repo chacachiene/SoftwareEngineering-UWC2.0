@@ -6,7 +6,7 @@ import styles from "./Home.module.css";
 import ProgressBar from "../ui/progress/ProgressBar";
 import DoughnutChart from "../ui/charts/DoughNutChart.js";
 import VerticalChart from "../ui/charts/VerticalChart";
-import Wrapper from "../../pages/layouts/Wrapper";
+
 
 
 const HomePage = () => {
@@ -30,12 +30,7 @@ const HomePage = () => {
   
 
   return (
-    <Wrapper
-      header={{
-        notifications: notifications,
-        messages: messages,
-        username: username,
-      }}
+    <React.Fragment
     >
       <Row>
         <div className={styles.container}>
@@ -59,7 +54,7 @@ const HomePage = () => {
                     TOTAL DONE <br />
                     {tasksJanitor}%
                   </span>
-                  {/* <DoughnutChart dataInput={[10, 20]} size={120} /> */}
+                  <DoughnutChart dataInput={[10, 20]} size={120} />
                 </div>
               </div>
             </Col>
@@ -71,7 +66,7 @@ const HomePage = () => {
                   <span className={styles.tasksDoneCollector}>
                     TOTAL DONE <br /> {tasksCollector}%
                   </span>
-                  {/* <DoughnutChart dataInput={[10, 20]} size={120} /> */}
+                  <DoughnutChart dataInput={[10, 20]} size={120} />
                 </div>
               </div>
             </Col>
@@ -85,10 +80,10 @@ const HomePage = () => {
             {Intl.NumberFormat().format(monthWaste)}
             {/*<div className={styles.}></div> */}
           </div>
-          {/* <VerticalChart dataInput={monthWatse} size={600} /> */}
+          <VerticalChart dataInput={monthWatse} size={600} />
         </div>
       </Row>
-    </Wrapper>
+    </React.Fragment>
   );
 };
 

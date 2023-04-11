@@ -18,7 +18,7 @@ const User = ({mcp}) => {
             <td>{ mcp.y }</td>
             <td>{ mcp.load.$numberDecimal }</td>
             <td>{ mcp.cap }</td>
-            <td><button class="btn btn-danger" onClick={handleDelete}><i class="bi bi-trash-fill"/></button></td>
+            <td><button className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash-fill"/></button></td>
         </tr>
     </>)
 };

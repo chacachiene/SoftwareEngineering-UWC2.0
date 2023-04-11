@@ -23,35 +23,35 @@ const MCPForm = ({ closeForm }) => {
     };
 
     return (
-        <><div class="border border-primary p-3">
-            <p class="h2 text-center">Location Information</p>
+        <><div className="border border-primary p-3">
+            <p className="h2 text-center">Location Information</p>
             <form autoComplete='off' onSubmit={handleSubmit}>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="x">Hoành độ</label>
-                    <input type="text" class="form-control"
+                    <input type="text" className="form-control"
                         name="x" value={formData.x} onChange={handleChange} />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="y">Tung độ</label>
-                    <input type="text" class="form-control"
+                    <input type="text" className="form-control"
                         name="y" value={formData.y} onChange={handleChange} />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="x">Sức chứa tối đa</label>
-                    <input type="text" class="form-control"
+                    <input type="text" className="form-control"
                         name="cap" value={formData.cap} onChange={handleChange} />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="x">Sức chứa hiện tại</label>
-                    <input type="text" class="form-control"
+                    <input type="text" className="form-control"
                         name="load" value={formData.load} onChange={handleChange} />
                 </div>
                 <br />
-                <button type="submit" class="btn btn-primary mx-5" >Submit <i class="fa fa-paper-plane"></i></button>
-                <button type="reset" class="btn btn-danger" onClick={clearForm}>Clear <i class="fa-solid fa-trash"></i></button>
+                <button type="submit" className="btn btn-primary mx-5" >Submit <i className="fa fa-paper-plane"></i></button>
+                <button type="reset" className="btn btn-danger" onClick={clearForm}>Clear <i className="fa-solid fa-trash"></i></button>
             </form>
         </div></>
     );
