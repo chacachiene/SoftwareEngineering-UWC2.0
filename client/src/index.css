@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+:root {
+  --font-base: 'Inter', sans-serif;
+  --font-alt: 'Open Sans', sans-serif;
+  --color-black: #0C0C0C;
+  --color-white: #FFFFFF;
+  --color-primary-bg: #BEFDD0;
+  --color-blue-btn: #0000EE;
+  --color-green-btn: #00CC66;
+  --color-secondary-bg: #CCFFFF;
+  --color-grey-bg-modal: #DDDDDD;
+  --color-dark-green-btn: #009933;
+  --color-nude-bg: #FFF5EE;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: var(--font-base);
+  }
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+
+#root {
+    padding: 80px 0;
+    background-color: var(--color-primary-bg);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* background-color: #f5f5f5; */
+    position: relative;
+}
+  

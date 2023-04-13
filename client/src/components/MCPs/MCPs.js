@@ -19,8 +19,8 @@ const MCPs = () => {
     return (
     <>
         <h1>MCPs List</h1>
-        <div class="input-group mb-3">
-            <button type="button" class="ms-3 btn btn-primary " onClick={() => setOpen(o => !o)}>
+        <div className="input-group mb-3">
+            <button type="button" className="ms-3 btn btn-primary " onClick={() => setOpen(o => !o)}>
                 Add Location
             </button>
             <Popup open={open} modal onClose={closeForm}>
@@ -28,8 +28,8 @@ const MCPs = () => {
             </Popup>
 
         </div>
-        {!mcps.length ? <div class="spinner-border" role="status"/> : 
-        <table class="table">
+        {!mcps.length ? <div className="spinner-border" role="status"/> : 
+        <table className="table">
         <thead>
             <tr>
                 <th scope="col">ID</th>

@@ -33,7 +33,7 @@ export const createTask = (form) => async (dispatch) => {
 
 export const updateTask = (id, form) => async (dispatch) => {
     try {
-        const { data: data } = await api.updateTask(id, formData);
+        const { data: data } = await api.updateTask(id, form);
 
         dispatch({ type: "UPDATE_TASK", payload: data });
     } catch (error) {

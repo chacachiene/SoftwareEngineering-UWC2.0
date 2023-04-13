@@ -19,7 +19,7 @@ const User = ({truck}) => {
             <td>{ truck.y.$numberDecimal }</td>
             <td>{ truck.load.$numberDecimal }</td>
             <td>{ truck.cap }</td>
-            <td><button class="btn btn-danger" onClick={handleDelete}><i class="bi bi-trash-fill"/></button></td>
+            <td><button className="btn btn-danger" onClick={handleDelete}><i className="bi bi-trash-fill"/></button></td>
         </tr>
     </>)
 };

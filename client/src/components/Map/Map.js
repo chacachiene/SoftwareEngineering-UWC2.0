@@ -33,13 +33,7 @@ const Map = () => {
     const messages = 1;
     const username = "Nghia Nguyen";
     return (<>
-            <Wrapper
-            header={{
-                notifications: notifications,
-                messages: messages,
-                username: username,
-            }}
-            >
+           
         <h1> Map </h1>
         <MapGL
             {...viewport}
@@ -51,14 +45,13 @@ const Map = () => {
             goongApiAccessToken={accessToken}
         >
         <h3>Camera Transition</h3>
-        {mapEx.map(mcp => <Marker latitude={mcp.latitude} longitude={ mcp.longitude}>
-            <input
+        {mapEx.map((mcp,index) => <Marker  key = {index} latitude={mcp.latitude} longitude={ mcp.longitude}>
+            <input 
                 type="radio"
                 onClick={() => handleSelect(mcp.longitude, mcp.latitude)}
             /></Marker>)}
     </MapGL>
 
-</Wrapper>
     </>)
 }
 

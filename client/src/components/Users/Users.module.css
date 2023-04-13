@@ -1,0 +1,92 @@
+.outerContainer {
+    padding: 0 42px;
+    margin: 40px 0 ;
+    background-color: var(--color-white);
+}
+
+.innerContainer {
+    padding: 26px;
+    background-color: var(--color-secondary-bg);
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titleHeader{
+    font-size: 3rem;
+
+}
+
+.filterContainer{
+    height: 32px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    padding-left: 20px;
+    border-radius: 4px;
+    margin-left: 40px;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+
+
+
+.searchBarContainer{
+    display: flex;
+    margin-left: 18px;
+
+}
+
+.inputText {
+    margin-left: 12px;
+    outline: none;
+    border: 0;
+}
+
+.searchBar {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 0 12px;
+    border-radius: 4px;
+    margin-right: 16px;
+
+}
+
+.searchText ,.filterText {
+    /* cursor: pointer; */
+    padding: 0 12px;
+}
+.filterText {
+    width: 100%;
+}
+
+.tableContainer {
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    margin-top: 48px;
+    display: flex;
+    max-height: 250px;
+    overflow: scroll;
+    /* -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+  }
+  
+  .buttonControl {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    margin-top: 30px;
+    /* padding: 40px 0; */
+        /* position: absolute; */
+    /* right: 40px; */
+  }

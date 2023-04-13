@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: 80vh;
+  min-height: 83vh;
   padding: 30px 64px 44px;
   display: flex;
   flex-direction: column;
@@ -93,6 +93,10 @@
 
 .navItem {
   padding: 16px;
+}
+
+.navbar a  {
+  color: #000;
 }
 
 .navItem:hover {

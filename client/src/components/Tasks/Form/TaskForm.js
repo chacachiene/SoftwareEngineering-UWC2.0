@@ -57,24 +57,24 @@ const TaskForm = ({ closeForm }) => {
 
 
     return (
-        <><div class="bg-light border border-primary p-3">
+        <><div className="bg-light border border-primary p-3">
             <h1>Task Form</h1>
             <form onSubmit={handleSubmit}>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="emp">Collector</label>
-                    <select class="form-control" id="emp" name="collector" value={form.collector} onChange={handleChange}>
+                    <select className="form-control" id="emp" name="collector" value={form.collector} onChange={handleChange}>
                         <option label=" "></option>
                         {collectors.map(collector => <option value={collector._id} key={collector._id}>{collector.name}</option>)}
                     </select>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="truck">Truck</label>
-                    <select class="form-control" id="emp" value={form.truck} name="truck" onChange={handleChange}>
+                    <select className="form-control" id="emp" value={form.truck} name="truck" onChange={handleChange}>
                         <option label=" "></option>
                         {trucks.map(truck => <option value={truck._id} key={truck._id}>{truck._id}</option>)}
                     </select>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="path">Working Route</label>
                     <Multiselect
                         options={mcps} // Options to display in the dropdown
@@ -99,11 +99,11 @@ const TaskForm = ({ closeForm }) => {
                         showCheckbox="true"
                     />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="janitor">Select Janitor:</label>
                     {
                         form.path.map((mcp, idx) => mcp ? <div key={idx}>
-                            <span class="text-info">For MCP: {mcp._id}</span>
+                            <span className="text-info">For MCP: {mcp._id}</span>
                             <Multiselect
                                 options={janitors} // Options to display in the dropdown
                                 selectedValues={''} // Preselected value to persist in dropdown
@@ -126,13 +126,13 @@ const TaskForm = ({ closeForm }) => {
                             />
                         </div> : <></>)}
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="date" >Date</label>
-                    <input type="date" class="form-control" id="date" value={form.date} name="date" onChange={handleChange} />
+                    <input type="date" className="form-control" id="date" value={form.date} name="date" onChange={handleChange} />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label htmlFor="shift">Shift</label>
-                    <select class="form-control" id="shift" value={form.shift} name="shift" onChange={handleChange} >
+                    <select className="form-control" id="shift" value={form.shift} name="shift" onChange={handleChange} >
                         <option label=" "></option>
                         <option value="1">7h-9h</option>
                         <option value="2">10h-12h</option>
@@ -141,8 +141,8 @@ const TaskForm = ({ closeForm }) => {
                     </select>
                 </div>
                 <br />
-                <button type="submit" class="btn btn-primary me-3">Submit</button>
-                <button type="button" onClick={clearForm} class="btn btn-danger">Reset</button>
+                <button type="submit" className="btn btn-primary me-3">Submit</button>
+                <button type="button" onClick={clearForm} className="btn btn-danger">Reset</button>
             </form>
         </div></>)
 }
