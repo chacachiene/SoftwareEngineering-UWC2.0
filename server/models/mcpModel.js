@@ -4,8 +4,8 @@ import Inc from 'mongoose-sequence';
 const AutoIncrement = Inc(mongoose);
 
 const mcpSchema = new mongoose.Schema({
-    x: { type: Number, required: true, default: 0 },
-    y: { type: Number, required: true, default: 0 },
+    x: { type: mongoose.Types.Decimal128, required: true, default: 0 },
+    y: { type: mongoose.Types.Decimal128, required: true, default: 0 },
     janitor: {
         type: [{
             type: mongoose.Types.ObjectId,
@@ -19,4 +19,4 @@ const mcpSchema = new mongoose.Schema({
 
 mcpSchema.plugin(AutoIncrement, { id: "mcp_seq", inc_field: '_id' });
 
-export default mongoose.model("MCP", mcpSchema);
+export default mongoose.model("MCP", mcpSchema)

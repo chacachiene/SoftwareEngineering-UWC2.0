@@ -1,1 +1,2 @@
-# SoftwareEngineering-UWC2.0
+frontend: npm start
+backend: cd server => npm start
